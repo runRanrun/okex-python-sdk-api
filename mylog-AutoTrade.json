@@ -1,0 +1,4 @@
+2020-03-12 23:06:11,173 - INFO - url:"https://www.okex.com/api/swap/v3/order"
+2020-03-12 23:06:11,176 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "2", "size": "1", "price": "50.25", "order_type": "0"}
+2020-03-12 23:06:28,215 - INFO - url:"https://www.okex.com/api/swap/v3/order"
+2020-03-12 23:06:28,215 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "19.9", "order_type": "0"}

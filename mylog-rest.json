@@ -1,0 +1,45 @@
+2020-03-07 11:55:14,901 - INFO - url:"https://www.okex.com/api/account/v3/wallet"
+2020-03-07 11:55:14,901 - INFO - body:
+2020-03-07 11:55:15,244 - INFO - result:[]
+2020-03-07 12:00:12,310 - INFO - url:"https://www.okex.com/api/account/v3/wallet"
+2020-03-07 12:00:12,310 - INFO - body:
+2020-03-07 12:00:12,668 - INFO - url:"https://www.okex.com/api/swap/v3/position"
+2020-03-07 12:00:12,669 - INFO - body:
+2020-03-07 12:00:13,052 - INFO - result:[{"margin_mode": "crossed", "timestamp": "2020-03-05T14:32:32.534Z", "holding": [{"avail_position": "100", "avg_cost": "61.09", "instrument_id": "LTC-USD-SWAP", "last": "62.95", "leverage": "40.00", "liquidation_price": "108.52", "maint_margin_ratio": "0.0100", "margin": "0.3971", "position": "100", "realized_pnl": "0.0093", "settled_pnl": "-0.3669", "settlement_price": "62.49", "side": "short", "timestamp": "2020-03-05T14:32:32.534Z", "unrealized_pnl": "-0.1136"}]}]
+2020-03-07 12:02:57,222 - INFO - url:"https://www.okex.com/api/account/v3/wallet"
+2020-03-07 12:02:57,222 - INFO - body:
+2020-03-07 12:02:57,805 - INFO - url:"https://www.okex.com/api/swap/v3/LTC-USD-SWAP/position"
+2020-03-07 12:02:57,805 - INFO - body:
+2020-03-07 12:02:58,117 - INFO - result:{"margin_mode": "crossed", "timestamp": "2020-03-05T14:32:32.534Z", "holding": [{"avail_position": "100", "avg_cost": "61.09", "instrument_id": "LTC-USD-SWAP", "last": "62.95", "leverage": "40.00", "liquidation_price": "108.52", "maint_margin_ratio": "0.0100", "margin": "0.3971", "position": "100", "realized_pnl": "0.0093", "settled_pnl": "-0.3669", "settlement_price": "62.49", "side": "short", "timestamp": "2020-03-05T14:32:32.534Z", "unrealized_pnl": "-0.1157"}]}
+2020-03-07 12:19:39,781 - INFO - url:"https://www.okex.com/api/account/v3/wallet"
+2020-03-07 12:19:39,781 - INFO - body:
+2020-03-07 12:19:40,105 - INFO - url:"https://www.okex.com/api/swap/v3/LTC-USD-SWAP/position"
+2020-03-07 12:19:40,105 - INFO - body:
+2020-03-07 12:19:40,448 - INFO - result:{"margin_mode": "crossed", "timestamp": "2020-03-05T14:32:32.534Z", "holding": [{"avail_position": "100", "avg_cost": "61.09", "instrument_id": "LTC-USD-SWAP", "last": "63.19", "leverage": "40.00", "liquidation_price": "108.52", "maint_margin_ratio": "0.0100", "margin": "0.3956", "position": "100", "realized_pnl": "0.0093", "settled_pnl": "-0.3669", "settlement_price": "62.49", "side": "short", "timestamp": "2020-03-05T14:32:32.534Z", "unrealized_pnl": "-0.1731"}]}
+2020-03-07 12:23:17,001 - INFO - url:"https://www.okex.com/api/account/v3/wallet"
+2020-03-07 12:23:17,001 - INFO - body:
+2020-03-07 12:23:17,401 - INFO - url:"https://www.okex.com/api/swap/v3/LTC-USD-SWAP/position"
+2020-03-07 12:23:17,401 - INFO - body:
+2020-03-07 12:23:17,738 - INFO - result:{"margin_mode": "crossed", "timestamp": "2020-03-05T14:32:32.534Z", "holding": [{"avail_position": "100", "avg_cost": "61.09", "instrument_id": "LTC-USD-SWAP", "last": "63.13", "leverage": "40.00", "liquidation_price": "108.52", "maint_margin_ratio": "0.0100", "margin": "0.3960", "position": "100", "realized_pnl": "0.0093", "settled_pnl": "-0.3669", "settlement_price": "62.49", "side": "short", "timestamp": "2020-03-05T14:32:32.534Z", "unrealized_pnl": "-0.1590"}]}
+2020-03-07 12:43:15,495 - INFO - url:"https://www.okex.com/api/account/v3/wallet"
+2020-03-07 12:43:15,495 - INFO - body:
+2020-03-07 12:43:15,952 - INFO - url:"https://www.okex.com/api/swap/v3/LTC-USD-SWAP/position"
+2020-03-07 12:43:15,952 - INFO - body:
+2020-03-07 12:43:16,274 - INFO - url:"https://www.okex.com/api/swap/v3/order_algo/LTC-USD-SWAP?order_type=1&status=2"
+2020-03-07 12:43:16,274 - INFO - body:
+2020-03-07 12:43:16,626 - INFO - result:{"orderStrategyVOS": []}
+2020-03-07 13:17:36,008 - INFO - url:"https://www.okex.com/api/account/v3/wallet"
+2020-03-07 13:17:36,008 - INFO - body:
+2020-03-07 13:17:36,370 - INFO - url:"https://www.okex.com/api/swap/v3/LTC-USD-SWAP/position"
+2020-03-07 13:17:36,370 - INFO - body:
+2020-03-07 13:17:36,875 - INFO - url:"https://www.okex.com/api/swap/v3/orders/LTC-USD-SWAP/2"
+2020-03-07 13:17:36,875 - INFO - body:
+2020-03-07 13:17:37,350 - ERROR - result:{"error_message":"Order does not exist","code":35029,"error_code":"35029","message":"Order does not exist"}400
+2020-03-07 13:18:44,499 - INFO - url:"https://www.okex.com/api/account/v3/wallet"
+2020-03-07 13:18:44,499 - INFO - body:
+2020-03-07 13:18:45,298 - INFO - url:"https://www.okex.com/api/swap/v3/orders/LTC-USD-SWAP/2"
+2020-03-07 13:18:45,298 - INFO - body:
+2020-03-07 13:18:46,109 - ERROR - result:{"error_message":"Order does not exist","code":35029,"error_code":"35029","message":"Order does not exist"}400
+2020-03-07 14:50:08,233 - INFO - url:"https://www.okex.com/api/account/v3/wallet"
+2020-03-07 14:50:08,233 - INFO - body:
+2020-03-07 14:50:08,878 - INFO - result:[]
