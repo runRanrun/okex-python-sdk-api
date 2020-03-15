@@ -77,7 +77,7 @@ class AutoTrade(object):
 
             CurrentPrice = float(result['last'])
             for i in int(self.ShortQuantity):
-
+                result = 
             OrderRecord = dict()
 
 
