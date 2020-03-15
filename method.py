@@ -31,6 +31,7 @@ class AutoTrade(object):
         self.CoinType = JY_dict['CoinType'].get()
 
         self.param_dict = JY_dict
+        
 
         self.ZYZS_ShortPrice = float(ZYZS_dict['ShortPrice'].get())
         self.ZYZS_ShortQuantity = ZYZS_dict['ShortQuantity'].get()
