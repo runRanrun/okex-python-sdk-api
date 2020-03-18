@@ -159,7 +159,7 @@ ZYZS_dict['QuickCloseTrigger'] = entry1_quickclose_trigger
 
 btn1 = Button(root, text='开始交易', command=lambda: method.start_trade(JY_dict,ZYZS_dict))
 btn1.grid(column=0, row=12)
-btn1 = Button(root, text='停止交易', command=lambda: function.stopdeal())
-btn1.grid(column=3, row=12)
+#btn1 = Button(root, text='停止交易', command=lambda: function.stopdeal())
+#btn1.grid(column=3, row=12)
 
 root.mainloop()
