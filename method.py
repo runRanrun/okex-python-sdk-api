@@ -16,13 +16,27 @@ class AutoTrade(object):
         log_format = '%(asctime)s - %(levelname)s - %(message)s'
         # 初始化日志
         logging.basicConfig(filename='mylog-AutoTrade.json', filemode='a', format=log_format, level=logging.INFO)
-        api_key = "e475a6ff-3a83-4bce-8cc8-51b1108b5d23"
-        secret_key = "57944536044AD9587DC263C734A2B3A7"
-        passphrase = "rander360104456"
-        self.accountAPI = account.AccountAPI(api_key, secret_key, passphrase, False)
+        vefyDict = dict()
+        vefyDict['api_key'] = list()
+        vefyDict['secret_key'] = list()
+        vefyDict['passphrase'] = list()
 
-        self.swapAPI = swap.SwapAPI(api_key, secret_key, passphrase, False)
-        self.spotAPI = spot.SpotAPI(api_key, secret_key, passphrase, False)
+        vefyDict['api_key'].append('e475a6ff-3a83-4bce-8cc8-51b1108b5d23')
+        vefyDict['secret_key'].append('57944536044AD9587DC263C734A2B3A7')
+        vefyDict['passphrase'].append('rander360104456')
+
+        vefyDict['api_key'].append('a75b5757-cb73-4957-ad5e-72fbc01e3899')
+        vefyDict['secret_key'].append('1CA488771AD910A70AA12A80A2E9DA32')
+        vefyDict['passphrase'].append('12345678')
+
+
+
+        self.accountAPI = account.AccountAPI(vefyDict['api_key'][1],
+                                             vefyDict['secret_key'][1],
+                                             vefyDict['passphrase'][1], False)
+
+        self.swapAPI = swap.SwapAPI(vefyDict['api_key'][1],vefyDict['secret_key'][1], vefyDict['passphrase'][1], False)
+        self.spotAPI = spot.SpotAPI(vefyDict['api_key'][1],vefyDict['secret_key'][1], vefyDict['passphrase'][1], False)
         self.ShortQuantity = JY_dict['ShortQuantity'].get()
         self.LongQuantity = JY_dict['LongQuantity'].get()
      #   ShortPrice = float(JY_dict['ShortPrice'].get())
@@ -64,20 +78,19 @@ class AutoTrade(object):
                 self.LongDict[LongPrice].append(-1)
                 self.LongDict[LongPrice].append('NULL')
             for a in self.ShortDict.keys():
-                tmprice = currentPrice+(i+1)*currentPrice/self.Step
                 time.sleep(0.1)
                 try:
-                    result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='2', price=str(tmprice),
+                    result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='2', price=str(a),
                                                      size=self.ShortQuantity)
                     time.sleep(0.1)
                     if result['result'] == 'true' and result['error_code']=='0' and result['order_id'] != '-1':
                         self.ShortDict[a][0] = 0
                         self.ShortDict[a][1] = result['order_id']
-                        logging.info("开空单成功,开单价格：" + str(tmprice)+"开单数量：" +
+                        logging.info("开空单成功,开单价格：" + str(a)+"开单数量：" +
                                      self.ShortQuantity + " 订单id:"+result['order_id'])
 
                     else:
-                        logging.info('开空单失败，开单价格：'+str(tmprice))
+                        logging.info('开空单失败，开单价格：'+str(a))
                 except BaseException as errmsg:
                     logging.info("开空单异常:" + errmsg)
             for a in self.LongDict.keys():
@@ -88,10 +101,10 @@ class AutoTrade(object):
                     if result['result'] == 'true' and result['error_code']=='0' and result['order_id'] != '-1':
                         self.LongDict[a][0] = 0
                         self.LongDict[a][1] = result['order_id']
-                        logging.info("开多单成功,开单价格：" + str(tmprice)+"开单数量：" +
+                        logging.info("开多单成功,开单价格：" + str(a)+"开单数量：" +
                                      self.LongQuantity + " 订单id:"+result['order_id'])
                     else:
-                        logging.info('开多单失败，开单价格：'+str(tmprice))
+                        logging.info('开多单失败，开单价格：'+str(a))
                 except BaseException as errmsg:
                     logging.info("开多单异常:" + errmsg)
             self.JYflag = True

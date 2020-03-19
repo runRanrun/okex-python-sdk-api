@@ -1477,3 +1477,5 @@
 2020-03-19 18:32:08,710 - INFO - body:
 2020-03-19 22:00:47,368 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
 2020-03-19 22:00:47,368 - INFO - body:
+2020-03-19 22:28:14,010 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-19 22:28:14,014 - INFO - body:
