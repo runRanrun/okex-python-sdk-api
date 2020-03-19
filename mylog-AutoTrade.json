@@ -1473,3 +1473,7 @@
 2020-03-18 18:51:48,352 - INFO - url:"https://www.okex.com/api/swap/v3/cancel_order/LTC-USD-SWAP/457772773021001728"
 2020-03-18 18:51:48,352 - INFO - body:{}
 2020-03-18 18:51:48,642 - ERROR - result:{"error_message":"Invalid order status","result":"true","error_code":"35044","order_id":"-1"}400
+2020-03-19 18:32:08,710 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-19 18:32:08,710 - INFO - body:
+2020-03-19 22:00:47,368 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-19 22:00:47,368 - INFO - body:

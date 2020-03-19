@@ -33,23 +33,6 @@ class AutoTrade(object):
         self.CoinType = JY_dict['CoinType'].get()
 
         self.param_dict = JY_dict
-        
-
-        # self.ZYZS_ShortPrice = float(ZYZS_dict['ShortPrice'].get())
-        # self.ZYZS_ShortQuantity = ZYZS_dict['ShortQuantity'].get()
-        # self.ZYZS_OpenShortProp = float(ZYZS_dict['OpenShortProp'].get())
-        # self.ZYZS_CloseShortNormProp = ZYZS_dict['CloseShortNormProp'].get()
-        # self.ZYZS_CloseShortQuickProp = ZYZS_dict['CloseShortQuickProp'].get()
-        # self.ZYZS_WaveAdjust = float(ZYZS_dict['WaveAdjust'].get())
-        # self.ZYZS_CloseLag = ZYZS_dict['CloseLag'].get()
-        #
-        #
-        # self.ZYZS_LongPrice = float(ZYZS_dict['LongPrice'].get())
-        # self.ZYZS_LongQuantity = ZYZS_dict['LongQuantity'].get()
-        # self.ZYZS_OpenLongProp = float(ZYZS_dict['OpenLongProp'].get())
-        # self.ZYZS_CloseLongNormProp = ZYZS_dict['CloseLongNormProp'].get()
-        # self.ZYZS_Clososition = ZYZS_dict['AddPosition'].get()
-        # self.ZYZS_QuickCloseTrigger = ZYZS_dict['QuickCloseTrigger'].get()
 
         self.JYflag = False
         self.revokeFlag = False
