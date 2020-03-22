@@ -1479,3 +1479,750 @@
 2020-03-19 22:00:47,368 - INFO - body:
 2020-03-19 22:28:14,010 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
 2020-03-19 22:28:14,014 - INFO - body:
+2020-03-22 11:49:05,993 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:05,993 - INFO - body:
+2020-03-22 11:49:06,441 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:06,441 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.05", "order_type": "0"}
+2020-03-22 11:49:06,780 - INFO - 开多单成功,开单价格：39.05开单数量：1 订单id:460459136801777664
+2020-03-22 11:49:06,880 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:06,880 - INFO - body:
+2020-03-22 11:49:07,216 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459136801777664"
+2020-03-22 11:49:07,216 - INFO - body:{}
+2020-03-22 11:49:07,694 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:07,694 - INFO - body:
+2020-03-22 11:49:08,199 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:08,199 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.05", "order_type": "0"}
+2020-03-22 11:49:08,485 - INFO - 开多单成功,开单价格：39.05开单数量：1 订单id:460459151330846720
+2020-03-22 11:49:08,586 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:08,586 - INFO - body:
+2020-03-22 11:49:08,863 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459151330846720"
+2020-03-22 11:49:08,863 - INFO - body:{}
+2020-03-22 11:49:09,389 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:09,389 - INFO - body:
+2020-03-22 11:49:09,841 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:09,841 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.05", "order_type": "0"}
+2020-03-22 11:49:10,153 - INFO - 开多单成功,开单价格：39.05开单数量：1 订单id:460459165300762624
+2020-03-22 11:49:10,254 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:10,254 - INFO - body:
+2020-03-22 11:49:10,525 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459165300762624"
+2020-03-22 11:49:10,525 - INFO - body:{}
+2020-03-22 11:49:11,069 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:11,069 - INFO - body:
+2020-03-22 11:49:11,467 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:11,467 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.05", "order_type": "0"}
+2020-03-22 11:49:11,782 - INFO - 开多单成功,开单价格：39.05开单数量：1 订单id:460459178788595712
+2020-03-22 11:49:11,882 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:11,882 - INFO - body:
+2020-03-22 11:49:12,211 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459178788595712"
+2020-03-22 11:49:12,211 - INFO - body:{}
+2020-03-22 11:49:12,712 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:12,712 - INFO - body:
+2020-03-22 11:49:13,165 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:13,165 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.03", "order_type": "0"}
+2020-03-22 11:49:13,498 - INFO - 开多单成功,开单价格：39.03开单数量：1 订单id:460459193240856576
+2020-03-22 11:49:13,598 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:13,598 - INFO - body:
+2020-03-22 11:49:13,947 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459193240856576"
+2020-03-22 11:49:13,947 - INFO - body:{}
+2020-03-22 11:49:14,505 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:14,505 - INFO - body:
+2020-03-22 11:49:14,923 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:14,923 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.03", "order_type": "0"}
+2020-03-22 11:49:15,369 - INFO - 开多单成功,开单价格：39.03开单数量：1 订单id:460459208887969792
+2020-03-22 11:49:15,471 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:15,471 - INFO - body:
+2020-03-22 11:49:15,756 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459208887969792"
+2020-03-22 11:49:15,756 - INFO - body:{}
+2020-03-22 11:49:16,236 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:16,236 - INFO - body:
+2020-03-22 11:49:16,595 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:16,595 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.02", "order_type": "0"}
+2020-03-22 11:49:16,862 - INFO - 开多单成功,开单价格：39.02开单数量：1 订单id:460459221588322305
+2020-03-22 11:49:16,962 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:16,962 - INFO - body:
+2020-03-22 11:49:17,209 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459221588322305"
+2020-03-22 11:49:17,210 - INFO - body:{}
+2020-03-22 11:49:17,675 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:17,675 - INFO - body:
+2020-03-22 11:49:18,036 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:18,036 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.02", "order_type": "0"}
+2020-03-22 11:49:18,316 - INFO - 开多单成功,开单价格：39.02开单数量：1 订单id:460459233714055168
+2020-03-22 11:49:18,416 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:18,416 - INFO - body:
+2020-03-22 11:49:18,688 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459233714055168"
+2020-03-22 11:49:18,688 - INFO - body:{}
+2020-03-22 11:49:19,170 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:19,170 - INFO - body:
+2020-03-22 11:49:19,523 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:19,523 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.02", "order_type": "0"}
+2020-03-22 11:49:19,807 - INFO - 开多单成功,开单价格：39.02开单数量：1 订单id:460459246239819776
+2020-03-22 11:49:19,908 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:19,908 - INFO - body:
+2020-03-22 11:49:20,181 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460459246239819776"
+2020-03-22 11:49:20,181 - INFO - body:
+2020-03-22 11:49:20,543 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459246239819776"
+2020-03-22 11:49:20,543 - INFO - body:{}
+2020-03-22 11:49:21,024 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:21,024 - INFO - body:
+2020-03-22 11:49:21,445 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:21,446 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.01", "order_type": "0"}
+2020-03-22 11:49:21,747 - INFO - 开多单成功,开单价格：39.01开单数量：1 订单id:460459262547011584
+2020-03-22 11:49:21,849 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:21,849 - INFO - body:
+2020-03-22 11:49:22,135 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459262547011584"
+2020-03-22 11:49:22,135 - INFO - body:{}
+2020-03-22 11:49:22,679 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:22,679 - INFO - body:
+2020-03-22 11:49:23,201 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:23,201 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.02", "order_type": "0"}
+2020-03-22 11:49:23,542 - INFO - 开多单成功,开单价格：39.02开单数量：1 订单id:460459277406119936
+2020-03-22 11:49:23,643 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:23,643 - INFO - body:
+2020-03-22 11:49:23,964 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459277406119936"
+2020-03-22 11:49:23,964 - INFO - body:{}
+2020-03-22 11:49:24,457 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:24,457 - INFO - body:
+2020-03-22 11:49:24,893 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:24,893 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.02", "order_type": "0"}
+2020-03-22 11:49:25,182 - INFO - 开多单成功,开单价格：39.02开单数量：1 订单id:460459291370792960
+2020-03-22 11:49:25,282 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:25,282 - INFO - body:
+2020-03-22 11:49:25,592 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459291370792960"
+2020-03-22 11:49:25,592 - INFO - body:{}
+2020-03-22 11:49:26,125 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:26,125 - INFO - body:
+2020-03-22 11:49:26,483 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:26,483 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.03", "order_type": "0"}
+2020-03-22 11:49:26,814 - INFO - 开多单成功,开单价格：39.03开单数量：1 订单id:460459304853645312
+2020-03-22 11:49:26,915 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:26,915 - INFO - body:
+2020-03-22 11:49:27,338 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459304853645312"
+2020-03-22 11:49:27,338 - INFO - body:{}
+2020-03-22 11:49:27,842 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:27,842 - INFO - body:
+2020-03-22 11:49:28,284 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:28,284 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.03", "order_type": "0"}
+2020-03-22 11:49:28,588 - INFO - 开多单成功,开单价格：39.03开单数量：1 订单id:460459319858505728
+2020-03-22 11:49:28,688 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:28,688 - INFO - body:
+2020-03-22 11:49:29,009 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459319858505728"
+2020-03-22 11:49:29,009 - INFO - body:{}
+2020-03-22 11:49:29,535 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:29,535 - INFO - body:
+2020-03-22 11:49:29,927 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:29,927 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.03", "order_type": "0"}
+2020-03-22 11:49:30,268 - INFO - 开多单成功,开单价格：39.03开单数量：1 订单id:460459333833926656
+2020-03-22 11:49:30,368 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:30,368 - INFO - body:
+2020-03-22 11:49:30,630 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459333833926656"
+2020-03-22 11:49:30,630 - INFO - body:{}
+2020-03-22 11:49:31,139 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:31,139 - INFO - body:
+2020-03-22 11:49:31,556 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:31,556 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.03", "order_type": "0"}
+2020-03-22 11:49:31,834 - INFO - 开多单成功,开单价格：39.03开单数量：1 订单id:460459347119646720
+2020-03-22 11:49:31,935 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:31,935 - INFO - body:
+2020-03-22 11:49:32,255 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459347119646720"
+2020-03-22 11:49:32,255 - INFO - body:{}
+2020-03-22 11:49:32,766 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:32,766 - INFO - body:
+2020-03-22 11:49:33,160 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:33,161 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.03", "order_type": "0"}
+2020-03-22 11:49:33,530 - INFO - 开多单成功,开单价格：39.03开单数量：1 订单id:460459361257859072
+2020-03-22 11:49:33,630 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:33,630 - INFO - body:
+2020-03-22 11:49:33,940 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459361257859072"
+2020-03-22 11:49:33,941 - INFO - body:{}
+2020-03-22 11:49:34,477 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:34,477 - INFO - body:
+2020-03-22 11:49:34,866 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:34,866 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.03", "order_type": "0"}
+2020-03-22 11:49:35,191 - INFO - 开多单成功,开单价格：39.03开单数量：1 订单id:460459375149393920
+2020-03-22 11:49:35,292 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:35,292 - INFO - body:
+2020-03-22 11:49:35,610 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459375149393920"
+2020-03-22 11:49:35,611 - INFO - body:{}
+2020-03-22 11:49:36,104 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:36,104 - INFO - body:
+2020-03-22 11:49:36,602 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:49:36,602 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "39.03", "order_type": "0"}
+2020-03-22 11:49:36,891 - INFO - 开多单成功,开单价格：39.03开单数量：1 订单id:460459389607946240
+2020-03-22 11:49:36,991 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:49:36,991 - INFO - body:
+2020-03-22 11:49:37,267 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460459389607946240"
+2020-03-22 11:49:37,267 - INFO - body:{}
+2020-03-22 11:51:27,307 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:27,307 - INFO - body:
+2020-03-22 11:51:27,761 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:27,761 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.98", "order_type": "0"}
+2020-03-22 11:51:28,133 - INFO - 开多单成功,开单价格：38.98开单数量：1 订单id:460460322576345088
+2020-03-22 11:51:28,233 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:28,233 - INFO - body:
+2020-03-22 11:51:28,520 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460322576345088"
+2020-03-22 11:51:28,520 - INFO - body:{}
+2020-03-22 11:51:28,986 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:28,987 - INFO - body:
+2020-03-22 11:51:29,395 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:29,395 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.98", "order_type": "0"}
+2020-03-22 11:51:29,736 - INFO - 开多单成功,开单价格：38.98开单数量：1 订单id:460460336079120384
+2020-03-22 11:51:29,836 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:29,836 - INFO - body:
+2020-03-22 11:51:30,152 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460336079120384"
+2020-03-22 11:51:30,152 - INFO - body:{}
+2020-03-22 11:51:30,677 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:30,677 - INFO - body:
+2020-03-22 11:51:31,047 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:31,047 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.98", "order_type": "0"}
+2020-03-22 11:51:31,397 - INFO - 开多单成功,开单价格：38.98开单数量：1 订单id:460460349970917376
+2020-03-22 11:51:31,498 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:31,498 - INFO - body:
+2020-03-22 11:51:31,764 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460349970917376"
+2020-03-22 11:51:31,764 - INFO - body:{}
+2020-03-22 11:51:32,222 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:32,222 - INFO - body:
+2020-03-22 11:51:32,643 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:32,643 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.97", "order_type": "0"}
+2020-03-22 11:51:32,934 - INFO - 开多单成功,开单价格：38.97开单数量：1 订单id:460460363092535296
+2020-03-22 11:51:33,035 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:33,035 - INFO - body:
+2020-03-22 11:51:33,322 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460363092535296"
+2020-03-22 11:51:33,322 - INFO - body:{}
+2020-03-22 11:51:34,224 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:34,224 - INFO - body:
+2020-03-22 11:51:34,619 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:34,619 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.95", "order_type": "0"}
+2020-03-22 11:51:34,978 - INFO - 开多单成功,开单价格：38.95开单数量：1 订单id:460460380035950592
+2020-03-22 11:51:35,078 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:35,078 - INFO - body:
+2020-03-22 11:51:35,329 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460380035950592"
+2020-03-22 11:51:35,329 - INFO - body:{}
+2020-03-22 11:51:35,805 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:35,805 - INFO - body:
+2020-03-22 11:51:36,200 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:36,201 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.95", "order_type": "0"}
+2020-03-22 11:51:36,431 - INFO - 开多单成功,开单价格：38.95开单数量：1 订单id:460460392560142336
+2020-03-22 11:51:36,532 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:36,532 - INFO - body:
+2020-03-22 11:51:36,765 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460460392560142336"
+2020-03-22 11:51:36,765 - INFO - body:
+2020-03-22 11:51:37,141 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460392560142336"
+2020-03-22 11:51:37,141 - INFO - body:{}
+2020-03-22 11:51:37,598 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:37,598 - INFO - body:
+2020-03-22 11:51:37,955 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:37,955 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.94", "order_type": "0"}
+2020-03-22 11:51:38,280 - INFO - 开多单成功,开单价格：38.94开单数量：1 订单id:460460407827408896
+2020-03-22 11:51:38,381 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:38,381 - INFO - body:
+2020-03-22 11:51:38,672 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460407827408896"
+2020-03-22 11:51:38,672 - INFO - body:{}
+2020-03-22 11:51:39,165 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:39,165 - INFO - body:
+2020-03-22 11:51:39,581 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:39,581 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.94", "order_type": "0"}
+2020-03-22 11:51:39,895 - INFO - 开多单成功,开单价格：38.94开单数量：1 订单id:460460421349582848
+2020-03-22 11:51:39,995 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:39,995 - INFO - body:
+2020-03-22 11:51:40,287 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460421349582848"
+2020-03-22 11:51:40,287 - INFO - body:{}
+2020-03-22 11:51:40,812 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:40,812 - INFO - body:
+2020-03-22 11:51:41,524 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:41,524 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.94", "order_type": "0"}
+2020-03-22 11:51:41,831 - INFO - 开多单成功,开单价格：38.94开单数量：1 订单id:460460437685086208
+2020-03-22 11:51:41,931 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:41,931 - INFO - body:
+2020-03-22 11:51:42,241 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460460437685086208"
+2020-03-22 11:51:42,241 - INFO - body:
+2020-03-22 11:51:42,669 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460437685086208"
+2020-03-22 11:51:42,669 - INFO - body:{}
+2020-03-22 11:51:43,163 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:43,163 - INFO - body:
+2020-03-22 11:51:43,606 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:43,606 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.93", "order_type": "0"}
+2020-03-22 11:51:43,916 - INFO - 开多单成功,开单价格：38.93开单数量：1 订单id:460460455164061696
+2020-03-22 11:51:44,018 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:44,018 - INFO - body:
+2020-03-22 11:51:44,317 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460455164061696"
+2020-03-22 11:51:44,317 - INFO - body:{}
+2020-03-22 11:51:44,858 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:44,858 - INFO - body:
+2020-03-22 11:51:45,243 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:45,243 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.93", "order_type": "0"}
+2020-03-22 11:51:45,610 - INFO - 开多单成功,开单价格：38.93开单数量：1 订单id:460460469198465024
+2020-03-22 11:51:45,711 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:45,711 - INFO - body:
+2020-03-22 11:51:46,023 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460469198465024"
+2020-03-22 11:51:46,023 - INFO - body:{}
+2020-03-22 11:51:46,500 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:46,500 - INFO - body:
+2020-03-22 11:51:47,062 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:47,062 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.93", "order_type": "0"}
+2020-03-22 11:51:47,400 - INFO - 开多单成功,开单价格：38.93开单数量：1 订单id:460460484275152896
+2020-03-22 11:51:47,501 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:47,501 - INFO - body:
+2020-03-22 11:51:47,843 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460484275152896"
+2020-03-22 11:51:47,844 - INFO - body:{}
+2020-03-22 11:51:49,832 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:49,832 - INFO - body:
+2020-03-22 11:51:50,293 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:50,293 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.93", "order_type": "0"}
+2020-03-22 11:51:50,613 - INFO - 开多单成功,开单价格：38.93开单数量：1 订单id:460460511367473152
+2020-03-22 11:51:50,714 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:50,714 - INFO - body:
+2020-03-22 11:51:50,988 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460511367473152"
+2020-03-22 11:51:50,988 - INFO - body:{}
+2020-03-22 11:51:51,513 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:51,513 - INFO - body:
+2020-03-22 11:51:51,895 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:51,895 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.93", "order_type": "0"}
+2020-03-22 11:51:52,180 - INFO - 开多单成功,开单价格：38.93开单数量：1 订单id:460460524437186560
+2020-03-22 11:51:52,280 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:52,280 - INFO - body:
+2020-03-22 11:51:52,726 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460460524437186560"
+2020-03-22 11:51:52,726 - INFO - body:
+2020-03-22 11:51:53,104 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460524437186560"
+2020-03-22 11:51:53,104 - INFO - body:{}
+2020-03-22 11:51:53,613 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:53,613 - INFO - body:
+2020-03-22 11:51:54,034 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:54,034 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.91", "order_type": "0"}
+2020-03-22 11:51:54,299 - INFO - 开多单成功,开单价格：38.91开单数量：1 订单id:460460542294960128
+2020-03-22 11:51:54,399 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:54,399 - INFO - body:
+2020-03-22 11:51:54,725 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460542294960128"
+2020-03-22 11:51:54,725 - INFO - body:{}
+2020-03-22 11:51:56,403 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:56,403 - INFO - body:
+2020-03-22 11:51:56,756 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:56,756 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.9", "order_type": "0"}
+2020-03-22 11:51:57,081 - INFO - 开多单成功,开单价格：38.9开单数量：1 订单id:460460565459314688
+2020-03-22 11:51:57,182 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:57,182 - INFO - body:
+2020-03-22 11:51:57,526 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460460565459314688"
+2020-03-22 11:51:57,526 - INFO - body:
+2020-03-22 11:51:57,926 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460565459314688"
+2020-03-22 11:51:57,926 - INFO - body:{}
+2020-03-22 11:51:58,425 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:58,425 - INFO - body:
+2020-03-22 11:51:58,834 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:51:58,834 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.89", "order_type": "0"}
+2020-03-22 11:51:59,188 - INFO - 开多单成功,开单价格：38.89开单数量：1 订单id:460460583243950080
+2020-03-22 11:51:59,288 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:51:59,288 - INFO - body:
+2020-03-22 11:51:59,611 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460460583243950080"
+2020-03-22 11:51:59,612 - INFO - body:{}
+2020-03-22 11:52:00,149 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:52:00,149 - INFO - body:
+2020-03-22 11:52:00,554 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 11:52:00,554 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "38.89", "order_type": "0"}
+2020-03-22 11:52:00,915 - INFO - 开多单成功,开单价格：38.89开单数量：1 订单id:460460597619664896
+2020-03-22 11:52:01,016 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 11:52:01,016 - INFO - body:
+2020-03-22 22:17:47,005 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:17:47,006 - INFO - body:
+2020-03-22 22:18:16,509 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:18:16,510 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "0.0", "order_type": "0"}
+2020-03-22 22:18:16,861 - ERROR - result:{"error_message":"Invalid order price","result":"true","error_code":"35042","order_id":"-1"}400
+2020-03-22 22:21:25,487 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:21:25,487 - INFO - body:
+2020-03-22 22:21:25,937 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:21:25,937 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "0.0", "order_type": "0"}
+2020-03-22 22:21:26,510 - ERROR - result:{"error_message":"Invalid order price","result":"true","error_code":"35042","order_id":"-1"}400
+2020-03-22 22:22:03,025 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:22:03,025 - INFO - body:
+2020-03-22 22:22:03,465 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:22:03,465 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "0.0", "order_type": "0"}
+2020-03-22 22:22:03,749 - ERROR - result:{"error_message":"Invalid order price","result":"true","error_code":"35042","order_id":"-1"}400
+2020-03-22 22:23:31,933 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:23:31,935 - INFO - body:
+2020-03-22 22:24:01,472 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:24:01,472 - INFO - body:
+2020-03-22 22:27:38,606 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:27:38,607 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.89", "order_type": "0"}
+2020-03-22 22:27:44,548 - INFO - 开多单成功,开单价格：36.89开单数量：1 订单id:460780524300347392
+2020-03-22 22:28:06,229 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:28:06,230 - INFO - body:
+2020-03-22 22:28:26,629 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460780524300347392"
+2020-03-22 22:28:26,631 - INFO - body:
+2020-03-22 22:28:39,574 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:28:39,574 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "3", "size": "1", "price": "37.07445", "order_type": "0"}
+2020-03-22 22:29:25,929 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460780524300347392"
+2020-03-22 22:29:25,930 - INFO - body:
+2020-03-22 22:43:07,967 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:07,967 - INFO - body:
+2020-03-22 22:43:08,810 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:08,811 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.65", "order_type": "0"}
+2020-03-22 22:43:09,199 - INFO - 开多单成功,开单价格：36.65开单数量：1 订单id:460788326640855040
+2020-03-22 22:43:09,299 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:09,300 - INFO - body:
+2020-03-22 22:43:09,601 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788326640855040"
+2020-03-22 22:43:09,602 - INFO - body:
+2020-03-22 22:43:10,366 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788326640855040"
+2020-03-22 22:43:10,366 - INFO - body:{}
+2020-03-22 22:43:10,866 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:10,867 - INFO - body:
+2020-03-22 22:43:11,243 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:11,243 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.63", "order_type": "0"}
+2020-03-22 22:43:11,808 - INFO - 开多单成功,开单价格：36.63开单数量：1 订单id:460788346943121408
+2020-03-22 22:43:11,908 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:11,909 - INFO - body:
+2020-03-22 22:43:12,217 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788346943121408"
+2020-03-22 22:43:12,217 - INFO - body:
+2020-03-22 22:43:12,600 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788346943121408"
+2020-03-22 22:43:12,601 - INFO - body:{}
+2020-03-22 22:43:13,465 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:13,465 - INFO - body:
+2020-03-22 22:43:13,866 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:13,867 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.61", "order_type": "0"}
+2020-03-22 22:43:14,183 - INFO - 开多单成功,开单价格：36.61开单数量：1 订单id:460788369006471168
+2020-03-22 22:43:14,284 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:14,284 - INFO - body:
+2020-03-22 22:43:14,703 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788369006471168"
+2020-03-22 22:43:14,703 - INFO - body:
+2020-03-22 22:43:15,466 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788369006471168"
+2020-03-22 22:43:15,466 - INFO - body:{}
+2020-03-22 22:43:16,378 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:16,378 - INFO - body:
+2020-03-22 22:43:17,426 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:17,426 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.61", "order_type": "0"}
+2020-03-22 22:43:17,719 - INFO - 开多单成功,开单价格：36.61开单数量：1 订单id:460788398667016192
+2020-03-22 22:43:17,819 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:17,819 - INFO - body:
+2020-03-22 22:43:19,529 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788398667016192"
+2020-03-22 22:43:19,529 - INFO - body:
+2020-03-22 22:43:19,942 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788398667016192"
+2020-03-22 22:43:19,942 - INFO - body:{}
+2020-03-22 22:43:20,822 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:20,822 - INFO - body:
+2020-03-22 22:43:21,224 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:21,224 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.6", "order_type": "0"}
+2020-03-22 22:43:21,789 - INFO - 开多单成功,开单价格：36.6开单数量：1 订单id:460788432817039362
+2020-03-22 22:43:21,890 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:21,890 - INFO - body:
+2020-03-22 22:43:22,175 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788432817039362"
+2020-03-22 22:43:22,175 - INFO - body:{}
+2020-03-22 22:43:22,674 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:22,674 - INFO - body:
+2020-03-22 22:43:23,060 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:23,060 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.61", "order_type": "0"}
+2020-03-22 22:43:23,356 - INFO - 开多单成功,开单价格：36.61开单数量：1 订单id:460788445922666496
+2020-03-22 22:43:23,457 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:23,457 - INFO - body:
+2020-03-22 22:43:23,754 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788445922666496"
+2020-03-22 22:43:23,754 - INFO - body:
+2020-03-22 22:43:24,414 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788445922666496"
+2020-03-22 22:43:24,414 - INFO - body:{}
+2020-03-22 22:43:25,305 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:25,305 - INFO - body:
+2020-03-22 22:43:27,227 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:27,227 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.63", "order_type": "0"}
+2020-03-22 22:43:27,544 - INFO - 开多单成功,开单价格：36.63开单数量：1 订单id:460788481036331008
+2020-03-22 22:43:27,645 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:27,645 - INFO - body:
+2020-03-22 22:43:28,222 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788481036331008"
+2020-03-22 22:43:28,222 - INFO - body:{}
+2020-03-22 22:43:28,701 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:28,702 - INFO - body:
+2020-03-22 22:43:29,370 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:29,370 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.63", "order_type": "0"}
+2020-03-22 22:43:29,722 - INFO - 开多单成功,开单价格：36.63开单数量：1 订单id:460788499296495616
+2020-03-22 22:43:29,822 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:29,822 - INFO - body:
+2020-03-22 22:43:30,118 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788499296495616"
+2020-03-22 22:43:30,119 - INFO - body:{}
+2020-03-22 22:43:30,735 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:30,735 - INFO - body:
+2020-03-22 22:43:33,845 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:33,845 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.66", "order_type": "0"}
+2020-03-22 22:43:34,170 - INFO - 开多单成功,开单价格：36.66开单数量：1 订单id:460788536609286144
+2020-03-22 22:43:34,271 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:34,271 - INFO - body:
+2020-03-22 22:43:34,564 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788536609286144"
+2020-03-22 22:43:34,564 - INFO - body:
+2020-03-22 22:43:34,956 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788536609286144"
+2020-03-22 22:43:34,957 - INFO - body:{}
+2020-03-22 22:43:37,004 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:37,004 - INFO - body:
+2020-03-22 22:43:38,063 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:38,064 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.66", "order_type": "0"}
+2020-03-22 22:43:38,471 - INFO - 开多单成功,开单价格：36.66开单数量：1 订单id:460788572733515776
+2020-03-22 22:43:38,572 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:38,572 - INFO - body:
+2020-03-22 22:43:39,055 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788572733515776"
+2020-03-22 22:43:39,055 - INFO - body:
+2020-03-22 22:43:40,567 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788572733515776"
+2020-03-22 22:43:40,568 - INFO - body:{}
+2020-03-22 22:43:41,085 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:41,086 - INFO - body:
+2020-03-22 22:43:41,496 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:41,496 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.66", "order_type": "0"}
+2020-03-22 22:43:41,822 - INFO - 开多单成功,开单价格：36.66开单数量：1 订单id:460788600782137344
+2020-03-22 22:43:41,923 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:41,923 - INFO - body:
+2020-03-22 22:43:42,912 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788600782137344"
+2020-03-22 22:43:42,912 - INFO - body:
+2020-03-22 22:43:43,616 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788600782137344"
+2020-03-22 22:43:43,616 - INFO - body:{}
+2020-03-22 22:43:45,407 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:45,407 - INFO - body:
+2020-03-22 22:43:46,064 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:46,064 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.67", "order_type": "0"}
+2020-03-22 22:43:46,366 - INFO - 开多单成功,开单价格：36.67开单数量：1 订单id:460788638965508096
+2020-03-22 22:43:46,467 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:46,467 - INFO - body:
+2020-03-22 22:43:47,806 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788638965508096"
+2020-03-22 22:43:47,806 - INFO - body:
+2020-03-22 22:43:48,783 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788638965508096"
+2020-03-22 22:43:48,784 - INFO - body:{}
+2020-03-22 22:43:49,404 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:49,404 - INFO - body:
+2020-03-22 22:43:49,820 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:49,820 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.67", "order_type": "0"}
+2020-03-22 22:43:50,502 - INFO - 开多单成功,开单价格：36.67开单数量：1 订单id:460788673679140864
+2020-03-22 22:43:50,603 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:50,603 - INFO - body:
+2020-03-22 22:43:50,903 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788673679140864"
+2020-03-22 22:43:50,903 - INFO - body:{}
+2020-03-22 22:43:51,406 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:51,406 - INFO - body:
+2020-03-22 22:43:51,893 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:51,893 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.67", "order_type": "0"}
+2020-03-22 22:43:52,195 - INFO - 开多单成功,开单价格：36.67开单数量：1 订单id:460788687849334784
+2020-03-22 22:43:52,295 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:52,296 - INFO - body:
+2020-03-22 22:43:53,557 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788687849334784"
+2020-03-22 22:43:53,558 - INFO - body:{}
+2020-03-22 22:43:54,079 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:54,079 - INFO - body:
+2020-03-22 22:43:54,480 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:54,480 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.68", "order_type": "0"}
+2020-03-22 22:43:55,192 - INFO - 开多单成功,开单价格：36.68开单数量：1 订单id:460788712988157952
+2020-03-22 22:43:55,292 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:55,292 - INFO - body:
+2020-03-22 22:43:55,583 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788712988157952"
+2020-03-22 22:43:55,583 - INFO - body:
+2020-03-22 22:43:57,628 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788712988157952"
+2020-03-22 22:43:57,629 - INFO - body:{}
+2020-03-22 22:43:58,414 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:58,414 - INFO - body:
+2020-03-22 22:43:59,369 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:43:59,370 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.67", "order_type": "0"}
+2020-03-22 22:43:59,670 - INFO - 开多单成功,开单价格：36.67开单数量：1 订单id:460788750572005376
+2020-03-22 22:43:59,771 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:43:59,771 - INFO - body:
+2020-03-22 22:44:00,155 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460788750572005376"
+2020-03-22 22:44:00,155 - INFO - body:
+2020-03-22 22:44:01,346 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460788750572005376"
+2020-03-22 22:44:01,346 - INFO - body:{}
+2020-03-22 22:44:01,858 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:44:01,858 - INFO - body:
+2020-03-22 22:44:02,244 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:44:02,244 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.67", "order_type": "0"}
+2020-03-22 22:44:02,658 - INFO - 开多单成功,开单价格：36.67开单数量：1 订单id:460788774729885696
+2020-03-22 22:44:02,759 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:44:02,759 - INFO - body:
+2020-03-22 22:44:36,883 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:44:36,884 - INFO - body:
+2020-03-22 22:44:40,457 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:44:40,458 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.66", "order_type": "0"}
+2020-03-22 22:45:17,028 - INFO - 开多单成功,开单价格：36.66开单数量：1 订单id:460789095637133312
+2020-03-22 22:45:25,419 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:45:25,421 - INFO - body:
+2020-03-22 22:45:32,316 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460789095637133312"
+2020-03-22 22:45:32,318 - INFO - body:
+2020-03-22 22:45:35,358 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:45:35,359 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "3", "size": "1", "price": "36.8433", "order_type": "0"}
+2020-03-22 22:46:19,870 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460789095637133312"
+2020-03-22 22:46:19,872 - INFO - body:{}
+2020-03-22 22:46:21,722 - ERROR - result:{"error_message":"Order does not exist","result":"true","error_code":"35029","order_id":"-1"}400
+2020-03-22 22:49:21,540 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:21,540 - INFO - body:
+2020-03-22 22:49:22,412 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:49:22,412 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.59", "order_type": "0"}
+2020-03-22 22:49:22,724 - INFO - 开多单成功,开单价格：36.59开单数量：1 订单id:460791460535674880
+2020-03-22 22:49:22,824 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:22,824 - INFO - body:
+2020-03-22 22:49:23,129 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:23,129 - INFO - body:
+2020-03-22 22:49:23,607 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:23,607 - INFO - body:
+2020-03-22 22:49:23,890 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:23,891 - INFO - body:
+2020-03-22 22:49:24,399 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:24,399 - INFO - body:
+2020-03-22 22:49:24,694 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:24,695 - INFO - body:
+2020-03-22 22:49:25,191 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:25,192 - INFO - body:
+2020-03-22 22:49:25,509 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:25,509 - INFO - body:
+2020-03-22 22:49:26,062 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:26,062 - INFO - body:
+2020-03-22 22:49:26,635 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:26,636 - INFO - body:
+2020-03-22 22:49:27,127 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:27,127 - INFO - body:
+2020-03-22 22:49:27,985 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:27,985 - INFO - body:
+2020-03-22 22:49:28,594 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:28,595 - INFO - body:
+2020-03-22 22:49:28,905 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:28,906 - INFO - body:
+2020-03-22 22:49:29,801 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:29,801 - INFO - body:
+2020-03-22 22:49:31,614 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:31,615 - INFO - body:
+2020-03-22 22:49:32,526 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:32,526 - INFO - body:
+2020-03-22 22:49:32,857 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:32,857 - INFO - body:
+2020-03-22 22:49:33,363 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:33,363 - INFO - body:
+2020-03-22 22:49:33,950 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:33,950 - INFO - body:
+2020-03-22 22:49:34,840 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:34,841 - INFO - body:
+2020-03-22 22:49:35,164 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:35,165 - INFO - body:
+2020-03-22 22:49:35,672 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:35,673 - INFO - body:
+2020-03-22 22:49:35,985 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:35,985 - INFO - body:
+2020-03-22 22:49:37,273 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:37,273 - INFO - body:
+2020-03-22 22:49:38,588 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460791460535674880"
+2020-03-22 22:49:38,588 - INFO - body:{}
+2020-03-22 22:49:39,468 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:39,468 - INFO - body:
+2020-03-22 22:49:39,864 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:49:39,865 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.61", "order_type": "0"}
+2020-03-22 22:49:40,193 - INFO - 开多单成功,开单价格：36.61开单数量：1 订单id:460791607056345088
+2020-03-22 22:49:40,294 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:40,294 - INFO - body:
+2020-03-22 22:49:40,941 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791607056345088"
+2020-03-22 22:49:40,941 - INFO - body:
+2020-03-22 22:49:41,353 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460791607056345088"
+2020-03-22 22:49:41,354 - INFO - body:{}
+2020-03-22 22:49:42,243 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:42,243 - INFO - body:
+2020-03-22 22:49:42,636 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:49:42,637 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.62", "order_type": "0"}
+2020-03-22 22:49:43,244 - INFO - 开多单成功,开单价格：36.62开单数量：1 订单id:460791632696387584
+2020-03-22 22:49:43,344 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:43,345 - INFO - body:
+2020-03-22 22:49:44,034 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791632696387584"
+2020-03-22 22:49:44,034 - INFO - body:
+2020-03-22 22:49:45,365 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460791632696387584"
+2020-03-22 22:49:45,366 - INFO - body:{}
+2020-03-22 22:49:46,263 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:46,264 - INFO - body:
+2020-03-22 22:49:47,039 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:49:47,039 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.62", "order_type": "0"}
+2020-03-22 22:49:47,354 - INFO - 开多单成功,开单价格：36.62开单数量：1 订单id:460791667153905664
+2020-03-22 22:49:47,454 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:47,454 - INFO - body:
+2020-03-22 22:49:47,747 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791667153905664"
+2020-03-22 22:49:47,748 - INFO - body:
+2020-03-22 22:49:48,273 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460791667153905664"
+2020-03-22 22:49:48,274 - INFO - body:{}
+2020-03-22 22:49:48,786 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:48,786 - INFO - body:
+2020-03-22 22:49:49,166 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:49:49,166 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.62", "order_type": "0"}
+2020-03-22 22:49:49,480 - INFO - 开多单成功,开单价格：36.62开单数量：1 订单id:460791684963182592
+2020-03-22 22:49:49,581 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:49,581 - INFO - body:
+2020-03-22 22:49:51,383 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791684963182592"
+2020-03-22 22:49:51,383 - INFO - body:
+2020-03-22 22:49:51,873 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460791684963182592"
+2020-03-22 22:49:51,873 - INFO - body:{}
+2020-03-22 22:49:53,032 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:53,032 - INFO - body:
+2020-03-22 22:49:53,490 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 22:49:53,491 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.62", "order_type": "0"}
+2020-03-22 22:49:53,790 - INFO - 开多单成功,开单价格：36.62开单数量：1 订单id:460791721162647552
+2020-03-22 22:49:53,890 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 22:49:53,890 - INFO - body:
+2020-03-22 22:49:54,168 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460791721162647552"
+2020-03-22 22:49:54,168 - INFO - body:
+2020-03-22 22:49:54,572 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460791721162647552"
+2020-03-22 22:49:54,573 - INFO - body:{}
+2020-03-22 23:46:00,141 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:00,141 - INFO - body:
+2020-03-22 23:46:00,966 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 23:46:00,966 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.46", "order_type": "0"}
+2020-03-22 23:46:02,635 - INFO - 开多单成功,开单价格：36.46开单数量：1 订单id:460819981204137984
+2020-03-22 23:46:02,736 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:02,736 - INFO - body:
+2020-03-22 23:46:03,121 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460819981204137984"
+2020-03-22 23:46:03,121 - INFO - body:{}
+2020-03-22 23:46:04,992 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:04,992 - INFO - body:
+2020-03-22 23:46:05,756 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 23:46:05,756 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.51", "order_type": "0"}
+2020-03-22 23:46:06,046 - INFO - 开多单成功,开单价格：36.51开单数量：1 订单id:460820009852807169
+2020-03-22 23:46:06,146 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:06,146 - INFO - body:
+2020-03-22 23:46:07,790 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460820009852807169"
+2020-03-22 23:46:07,790 - INFO - body:
+2020-03-22 23:46:09,092 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460820009852807169"
+2020-03-22 23:46:09,092 - INFO - body:{}
+2020-03-22 23:46:10,561 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:10,561 - INFO - body:
+2020-03-22 23:46:10,928 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 23:46:10,929 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.51", "order_type": "0"}
+2020-03-22 23:46:12,782 - INFO - 开多单成功,开单价格：36.51开单数量：1 订单id:460820064133916672
+2020-03-22 23:46:12,883 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:12,883 - INFO - body:
+2020-03-22 23:46:13,177 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460820064133916672"
+2020-03-22 23:46:13,177 - INFO - body:
+2020-03-22 23:46:13,561 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460820064133916672"
+2020-03-22 23:46:13,561 - INFO - body:{}
+2020-03-22 23:46:14,982 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:14,982 - INFO - body:
+2020-03-22 23:46:16,600 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 23:46:16,600 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.51", "order_type": "0"}
+2020-03-22 23:46:16,893 - INFO - 开多单成功,开单价格：36.51开单数量：1 订单id:460820100852164608
+2020-03-22 23:46:16,993 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:16,993 - INFO - body:
+2020-03-22 23:46:17,357 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460820100852164608"
+2020-03-22 23:46:17,357 - INFO - body:
+2020-03-22 23:46:17,827 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460820100852164608"
+2020-03-22 23:46:17,827 - INFO - body:{}
+2020-03-22 23:46:18,315 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:18,315 - INFO - body:
+2020-03-22 23:46:18,690 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 23:46:18,690 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.51", "order_type": "0"}
+2020-03-22 23:46:23,241 - INFO - 开多单成功,开单价格：36.51开单数量：1 订单id:460820154047211520
+2020-03-22 23:46:23,341 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:23,341 - INFO - body:
+2020-03-22 23:46:23,624 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460820154047211520"
+2020-03-22 23:46:23,624 - INFO - body:
+2020-03-22 23:46:23,984 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460820154047211520"
+2020-03-22 23:46:23,984 - INFO - body:{}
+2020-03-22 23:46:24,650 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:24,650 - INFO - body:
+2020-03-22 23:46:25,044 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 23:46:25,044 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.5", "order_type": "0"}
+2020-03-22 23:46:25,357 - INFO - 开多单成功,开单价格：36.5开单数量：1 订单id:460820171805108225
+2020-03-22 23:46:25,458 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:25,458 - INFO - body:
+2020-03-22 23:46:25,755 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460820171805108225"
+2020-03-22 23:46:25,755 - INFO - body:
+2020-03-22 23:46:26,140 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460820171805108225"
+2020-03-22 23:46:26,140 - INFO - body:{}
+2020-03-22 23:46:26,649 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:26,649 - INFO - body:
+2020-03-22 23:46:27,036 - INFO - url:"https://www.okex.me/api/swap/v3/order"
+2020-03-22 23:46:27,036 - INFO - body:{"instrument_id": "LTC-USD-SWAP", "type": "1", "size": "1", "price": "36.5", "order_type": "0"}
+2020-03-22 23:46:27,311 - INFO - 开多单成功,开单价格：36.5开单数量：1 订单id:460820188239177728
+2020-03-22 23:46:27,412 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:27,412 - INFO - body:
+2020-03-22 23:46:27,690 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/460820188239177728"
+2020-03-22 23:46:27,690 - INFO - body:
+2020-03-22 23:46:28,058 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/460820188239177728"
+2020-03-22 23:46:28,058 - INFO - body:{}
+2020-03-22 23:46:28,535 - INFO - url:"https://www.okex.me/api/spot/v3/instruments/LTC-USDT/ticker"
+2020-03-22 23:46:28,535 - INFO - body:
