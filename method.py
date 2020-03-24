@@ -10,47 +10,57 @@ import json
 import logging
 import datetime
 import time
-
+global stopprogram
 class AutoTrade(object):
     def __init__(self, JY_dict, ZYZS_dict):
         log_format = '%(asctime)s - %(levelname)s - %(message)s'
         # 初始化日志
         logging.basicConfig(filename='mylog-AutoTrade.json', filemode='a', format=log_format, level=logging.INFO)
-        vefyDict = dict()
-        vefyDict['api_key'] = list()
-        vefyDict['secret_key'] = list()
-        vefyDict['passphrase'] = list()
+        # vefyDict = dict()
+        # vefyDict['api_key'] = list()
+        # vefyDict['secret_key'] = list()
+        # vefyDict['passphrase'] = list()
+        #
+        # vefyDict['api_key'].append('e475a6ff-3a83-4bce-8cc8-51b1108b5d23')
+        # vefyDict['secret_key'].append('57944536044AD9587DC263C734A2B3A7')
+        # vefyDict['passphrase'].append('rander360104456')
+        #
+        # vefyDict['api_key'].append('a75b5757-cb73-4957-ad5e-72fbc01e3899')
+        # vefyDict['secret_key'].append('1CA488771AD910A70AA12A80A2E9DA32')
+        # vefyDict['passphrase'].append('12345678')
+        #
+        # vefyDict['api_key'].append('6cc8cdef-61ad-4137-a402-0c1dae905cfe')
+        # vefyDict['secret_key'].append('8EFC039D096B97619E9D4A558A5C5155')
+        # vefyDict['passphrase'].append('12345678')
 
-        vefyDict['api_key'].append('e475a6ff-3a83-4bce-8cc8-51b1108b5d23')
-        vefyDict['secret_key'].append('57944536044AD9587DC263C734A2B3A7')
-        vefyDict['passphrase'].append('rander360104456')
-
-        vefyDict['api_key'].append('a75b5757-cb73-4957-ad5e-72fbc01e3899')
-        vefyDict['secret_key'].append('1CA488771AD910A70AA12A80A2E9DA32')
-        vefyDict['passphrase'].append('12345678')
-
-        vefyDict['api_key'].append('6cc8cdef-61ad-4137-a402-0c1dae905cfe')
-        vefyDict['secret_key'].append('8EFC039D096B97619E9D4A558A5C5155')
-        vefyDict['passphrase'].append('12345678')
 
 
+        self.accountAPI = account.AccountAPI(JY_dict['api_key'].get(),
+                                             JY_dict['secret_key'].get(),
+                                             JY_dict['passphrase'].get(), False)
 
-        self.accountAPI = account.AccountAPI(vefyDict['api_key'][0],
-                                             vefyDict['secret_key'][0],
-                                             vefyDict['passphrase'][0], False)
+        self.swapAPI = swap.SwapAPI(JY_dict['api_key'].get(),
+                                    JY_dict['secret_key'].get(),
+                                    JY_dict['passphrase'].get(), False)
 
-        self.swapAPI = swap.SwapAPI(vefyDict['api_key'][0],vefyDict['secret_key'][0], vefyDict['passphrase'][0], False)
-        self.spotAPI = spot.SpotAPI(vefyDict['api_key'][0],vefyDict['secret_key'][0], vefyDict['passphrase'][0], False)
+        self.spotAPI = spot.SpotAPI(JY_dict['api_key'].get(),
+                                    JY_dict['secret_key'].get(),
+                                    JY_dict['passphrase'].get(), False)
         self.ShortQuantity = JY_dict['ShortQuantity'].get()
         self.LongQuantity = JY_dict['LongQuantity'].get()
-     #   ShortPrice = float(JY_dict['ShortPrice'].get())
-      #  LongPrice = float(JY_dict['LongPrice'].get())
+     #  ShortPrice = float(JY_dict['ShortPrice'].get())
+      # LongPrice = float(JY_dict['LongPrice'].get())
         self.ShortPoint = int(JY_dict['ShortPoint'].get())
         self.LongPoint = int(JY_dict['LongPoint'].get())
         self.Step = float(JY_dict['Step'].get())
+        self.Step2 = float(JY_dict['Step2'].get())
         self.CoinType = JY_dict['CoinType'].get()
 
         self.param_dict = JY_dict
+        result = self.spotAPI.get_specific_ticker(self.CoinType + '-USDT')
+
+        if result['instrument_id'] == self.CoinType + '-USDT':
+            self.currentPrice = float(result['last'])
 
         self.JYflag = False
         self.revokeFlag = False
@@ -79,23 +89,24 @@ class AutoTrade(object):
 
     def long_take(self):
         if self.longTake == 'need':
-            while True:
-                time.sleep(0.1)
-                try:
-                    result = self.spotAPI.get_specific_ticker(self.CoinType + '-USDT')
-                    if result['instrument_id'] == self.CoinType + '-USDT':
-                        LongPrice = float(result['last'])
-                        break
-                    else:
-                        time.sleep(2)
-                        print("获取当前价格失败，再次获取")
-                except BaseException as errmsg:
-                    print("获取当前价格失败，再次获取。错误信息："+errmsg)
+            # while True:
+            #     time.sleep(0.1)
+            #     try:
+            #         result = self.spotAPI.get_specific_ticker(self.CoinType + '-USDT')
+            #         if result['instrument_id'] == self.CoinType + '-USDT':
+            #             LongPrice = float(result['last'])
+            #             break
+            #         else:
+            #             time.sleep(2)
+            #             print("获取当前价格失败，再次获取")
+            #     except BaseException as errmsg:
+            #         print("获取当前价格失败，再次获取。错误信息："+errmsg)
+            LongPrice = self.currentPrice
             for i in range(0, self.LongPoint):
-                LongPrice = round(LongPrice - LongPrice / self.Step, 2)
                 self.LongDict[LongPrice] = list()
                 self.LongDict[LongPrice].append(-1)
                 self.LongDict[LongPrice].append('NULL')
+                LongPrice = round(LongPrice - LongPrice / self.Step, 2)
             self.longTake = 'noneed'
         for a in self.LongDict.keys():
             if self.LongDict[a][0] == -1:
@@ -125,14 +136,15 @@ class AutoTrade(object):
             try:
                 result = self.spotAPI.get_specific_ticker(self.CoinType + '-USDT')
                 if result['instrument_id'] == self.CoinType + '-USDT':
-                    currentPrice = float(result['last'])
+                    self.currentPrice = float(result['last'])
                     break
                 else:
                     print("获取当前价格失败，再次获取")
             except BaseException as errmsg:
                 print("获取当前价格失败，再次获取。错误信息："+errmsg)
-        if currentPrice > max(self.LongDict.keys())+max(self.LongDict.keys())/self.Step:
+        if self.currentPrice > max(self.LongDict.keys())+max(self.LongDict.keys())/self.Step:
             self.longRevoke = 'need'
+
         else:
             for a in self.LongDict.keys():
                 if self.LongDict[a][0] == 0:
@@ -141,7 +153,7 @@ class AutoTrade(object):
                         time.sleep(0.1)
                         if result['state'] == '2':
                             result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3'
-                                                    , price=str(a + a / self.Step), size=self.LongQuantity)
+                                                    , price=str(a + a / self.Step2), size=self.LongQuantity)
                             if result == 'true':
                                 self.LongDict[a][0] = 1
                                 self.LongDict[a][1] = result['order_id']
@@ -165,7 +177,7 @@ class AutoTrade(object):
                 result = self.swapAPI.revoke_order(self.CoinType+'-USD-SWAP', order_id=self.LongDict[a][1])
                 time.sleep(0.1)
                 if result['result'] == False:
-                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step),
+                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step2),
                                             size=self.LongQuantity)
                     time.sleep(0.1)
         self.LongDict = dict()
@@ -295,5 +307,8 @@ class AutoTrade(object):
 #                 self.ZYZS_LongState = 0
 
 def start_trade(JY_dict, ZYZS_dict):
-    autotrade = AutoTrade(JY_dict,ZYZS_dict )
+    autotrade = AutoTrade(JY_dict,ZYZS_dict)
     autotrade.long_trade()
+
+def stop_stop():
+    global stopprogram
