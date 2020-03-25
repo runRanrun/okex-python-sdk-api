@@ -1,4 +1,5 @@
 # pyinstaller --console --onefile MainWindow.py
+#83078b278c80933cde6c583ce4da6b9328f5a14e
 #from .method import AutoTrade
 import method
 
