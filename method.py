@@ -43,9 +43,6 @@ class AutoTrade(object):
                                     JY_dict['secret_key'].get(),
                                     JY_dict['passphrase'].get(), False)
 
-        self.spotAPI = spot.SpotAPI(JY_dict['api_key'].get(),
-                                    JY_dict['secret_key'].get(),
-                                    JY_dict['passphrase'].get(), False)
         self.ShortQuantity = JY_dict['ShortQuantity'].get()
         self.LongQuantity = JY_dict['LongQuantity'].get()
      #  ShortPrice = float(JY_dict['ShortPrice'].get())
@@ -57,9 +54,9 @@ class AutoTrade(object):
         self.CoinType = JY_dict['CoinType'].get()
 
         self.param_dict = JY_dict
-        result = self.spotAPI.get_specific_ticker(self.CoinType + '-USDT')
+        result = self.swapAPI.get_specific_ticker(self.CoinType + '-USD-SWAP')
 
-        if result['instrument_id'] == self.CoinType + '-USDT':
+        if result['instrument_id'] == self.CoinType + '-USD-SWAP':
             self.currentPrice = float(result['last'])
 
         self.JYflag = False
@@ -134,8 +131,8 @@ class AutoTrade(object):
         while True:
             time.sleep(0.1)
             try:
-                result = self.spotAPI.get_specific_ticker(self.CoinType + '-USDT')
-                if result['instrument_id'] == self.CoinType + '-USDT':
+                result = self.swapAPI.get_specific_ticker(self.CoinType + '-USD-SWAP')
+                if result['instrument_id'] == self.CoinType + '-USD-SWAP':
                     self.currentPrice = float(result['last'])
                     break
                 else:
@@ -151,9 +148,9 @@ class AutoTrade(object):
                     try:
                         result = self.swapAPI.get_order_info(self.CoinType + '-USD-SWAP', self.LongDict[a][1])
                         time.sleep(0.1)
-                        if result['state'] == '2':
+                        if result['state'] == '2' and result['type'] == '1':
                             result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3'
-                                                    , price=str(a + a / self.Step2), size=self.LongQuantity)
+                                                    ,price=str(a + a / self.Step2), size=self.LongQuantity)
                             if result == 'true':
                                 self.LongDict[a][0] = 1
                                 self.LongDict[a][1] = result['order_id']
@@ -185,7 +182,7 @@ class AutoTrade(object):
         self.revokeFlag = 'noneed'
     def take_JY(self):
         if self.JYflag==False:
-            result = self.spotAPI.get_specific_ticker(self.CoinType + '-USDT')
+            result = self.swapAPI.get_specific_ticker(self.CoinType + '-USD-SWAP')
             currentPrice = float(result['last'])
             ShortPrice = currentPrice
             LongPrice = currentPrice
