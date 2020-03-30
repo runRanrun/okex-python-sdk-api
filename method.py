@@ -123,7 +123,8 @@ class AutoTrade(object):
                             time.sleep(10)
                             continue
                     except BaseException as errmsg:
-                        logging.info("开多单异常:" + errmsg)
+                        logging.info("开多单异常")
+                        print(errmsg)
                         time.sleep(10)
         return
 
@@ -150,8 +151,8 @@ class AutoTrade(object):
                         time.sleep(0.1)
                         if result['state'] == '2' and result['type'] == '1':
                             result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3'
-                                                    ,price=str(a + a / self.Step2), size=self.LongQuantity)
-                            if result == 'true':
+                                                    , price=str(a + a / self.Step2), size=self.LongQuantity)
+                            if result['result'] == 'true':
                                 self.LongDict[a][0] = 1
                                 self.LongDict[a][1] = result['order_id']
                             time.sleep(0.1)
@@ -165,21 +166,29 @@ class AutoTrade(object):
                             self.LongDict[a][0] = -1
                             self.LongDict[a][1] = 'NULL'
                     except BaseException as errmsg:
-                        print('查询平多单失败：'+errmsg)
-
+                        print('查询平多单失败：')
+                        print(errmsg)
 
     def long_revoke(self):
         for a in self.LongDict.keys():
             if self.LongDict[a][0] == 0:
-                result = self.swapAPI.revoke_order(self.CoinType+'-USD-SWAP', order_id=self.LongDict[a][1])
-                time.sleep(0.1)
-                if result['result'] == False:
-                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step2),
-                                            size=self.LongQuantity)
+                try:
                     time.sleep(0.1)
-        self.LongDict = dict()
+                    result = self.swapAPI.get_order_info(self.CoinType + '-USD-SWAP', self.LongDict[a][1])
+                    if result['result'] == 'true'and (result['state'] == '0' or result['state'] == '1'):
+                        self.swapAPI.revoke_order(self.CoinType+'-USD-SWAP', order_id=self.LongDict[a][1])
+                    elif result['result'] == 'true' and result['state'] == '2':
+                        self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step2),
+                                            size=self.LongQuantity)
+                        time.sleep(0.1)
+                except BaseException as errmsg:
+                    print('撤单失败')
+                    print(errmsg)
+                    continue
+        self.LongDict.clear()
         self.longTake = 'need'
         self.revokeFlag = 'noneed'
+
     def take_JY(self):
         if self.JYflag==False:
             result = self.swapAPI.get_specific_ticker(self.CoinType + '-USD-SWAP')
@@ -199,35 +208,51 @@ class AutoTrade(object):
             for a in self.ShortDict.keys():
                 time.sleep(0.1)
                 try:
-                    result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='2', price=str(a),
-                                                     size=self.ShortQuantity)
-                    time.sleep(0.1)
-                    if result['result'] == 'true' and result['error_code']=='0' and result['order_id'] != '-1':
-                        self.ShortDict[a][0] = 0
-                        self.ShortDict[a][1] = result['order_id']
-                        logging.info("开空单成功,开单价格：" + str(a)+"开单数量：" +
-                                     self.ShortQuantity + " 订单id:"+result['order_id'])
-
-                    else:
-                        logging.info('开空单失败，开单价格：'+str(a))
+                    openflag = 0
+                    result = self.swapAPI.get_order_list('XRP-USD-SWAP', state='0')
+                    for b in result['order_info']:
+                        if b['type'] == '4':
+                            closeprice = float(b['price'])
+                            if abs(a - closeprice) < a / self.step:
+                                openflag = -1
+                    if openflag == 0:
+                        result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='2', price=str(a),
+                                                         size=self.ShortQuantity)
+                        time.sleep(0.1)
+                        if result['result'] == 'true' and result['error_code']=='0' and result['order_id'] != '-1':
+                            self.ShortDict[a][0] = 0
+                            self.ShortDict[a][1] = result['order_id']
+                            logging.info("开空单成功,开单价格：" + str(a)+"开单数量：" +
+                                         self.ShortQuantity + " 订单id:"+result['order_id'])
+                        else:
+                            logging.info('开空单失败，开单价格：'+str(a))
                 except BaseException as errmsg:
                     logging.info("开空单异常:" + errmsg)
             for a in self.LongDict.keys():
                 time.sleep(0.1)
                 try:
-                    result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='1', price=str(a),
-                                                     size=self.LongQuantity)
-                    if result['result'] == 'true' and result['error_code']=='0' and result['order_id'] != '-1':
-                        self.LongDict[a][0] = 0
-                        self.LongDict[a][1] = result['order_id']
-                        logging.info("开多单成功,开单价格：" + str(a)+"开单数量：" +
-                                     self.LongQuantity + " 订单id:"+result['order_id'])
-                    else:
-                        logging.info('开多单失败，开单价格：'+str(a))
-                except BaseException as errmsg:
-                    logging.info("开多单异常:" + errmsg)
-            self.JYflag = True
+                    openflag = 0
+                    result = self.swapAPI.get_order_list('XRP-USD-SWAP', state='0')
+                    for b in result['order_info']:
+                        if b['type'] == '3':
+                            closeprice = float(b['price'])
+                            if abs(a - closeprice) < a / self.step:
+                                openflag = -1
 
+                    if openflag == 0:
+                        result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='1', price=str(a),
+                                                         size=self.LongQuantity)
+                        if result['result'] == 'true' and result['error_code']=='0' and result['order_id'] != '-1':
+                            self.LongDict[a][0] = 0
+                            self.LongDict[a][1] = result['order_id']
+                            logging.info("开多单成功,开单价格：" + str(a)+"开单数量：" +
+                                         self.LongQuantity + " 订单id:"+result['order_id'])
+                        else:
+                            logging.info('开多单失败，开单价格：'+str(a))
+                except BaseException as errmsg:
+                    logging.info("开多单异常:")
+                    print(errmsg)
+            self.JYflag = True
 
     def check_JY(self):
         for a in self.ShortDict.keys():
@@ -237,7 +262,7 @@ class AutoTrade(object):
                 if result['state'] == '2':
                     self.revokeFlag = True
                     self.ShortDict[a][0] = 1
-                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='4', price=str(a-a/self.Step),
+                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='4', price=str(a-a/self.Step2),
                                                  size=self.ShortQuantity)
                     time.sleep(0.1)
 
@@ -248,7 +273,7 @@ class AutoTrade(object):
                 if result['state'] == '2':
                     self.revokeFlag = True
                     self.LongDict[a][0] = 1
-                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step),
+                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step2),
                                             size=self.LongQuantity)
                     time.sleep(0.1)
 
@@ -258,16 +283,16 @@ class AutoTrade(object):
             if self.ShortDict[a][0] == 0:
                 result = self.swapAPI.revoke_order(self.CoinType+'-USD-SWAP', order_id=self.ShortDict[a][1])
                 time.sleep(0.1)
-                if result['result'] == False:
-                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='4', price=str(a - a / self.Step),
+                if result['result'] != 'true':
+                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='4', price=str(a - a / self.Step2),
                                             size=self.ShortQuantity)
                     time.sleep(0.1)
         for a in self.LongDict.keys():
             if self.LongDict[a][0] == 0:
                 result = self.swapAPI.revoke_order(self.CoinType+'-USD-SWAP', order_id=self.LongDict[a][1])
                 time.sleep(0.1)
-                if result['result'] == False:
-                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step),
+                if result['result'] != 'true':
+                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step2),
                                             size=self.LongQuantity)
                     time.sleep(0.1)
         self.JYflag = False
@@ -305,7 +330,7 @@ class AutoTrade(object):
 
 def start_trade(JY_dict, ZYZS_dict):
     autotrade = AutoTrade(JY_dict,ZYZS_dict)
-    autotrade.long_trade()
+    autotrade.trade()
 
 def stop_stop():
     global stopprogram
