@@ -210,11 +210,12 @@ class AutoTrade(object):
                 try:
                     openflag = 0
                     result = self.swapAPI.get_order_list('XRP-USD-SWAP', state='0')
-                    for b in result['order_info']:
-                        if b['type'] == '4':
-                            closeprice = float(b['price'])
-                            if abs(a - closeprice) < a / self.step:
-                                openflag = -1
+                    if result:
+                        for b in result[0]['order_info']:
+                            if b['type'] == '4':
+                                closeprice = float(b['price'])
+                                if abs(a - closeprice) < a / self.step:
+                                    openflag = -1
                     if openflag == 0:
                         result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='2', price=str(a),
                                                          size=self.ShortQuantity)
@@ -227,17 +228,19 @@ class AutoTrade(object):
                         else:
                             logging.info('开空单失败，开单价格：'+str(a))
                 except BaseException as errmsg:
-                    logging.info("开空单异常:" + errmsg)
+                    logging.info("开空单异常:")
+                    print(errmsg)
             for a in self.LongDict.keys():
                 time.sleep(0.1)
                 try:
                     openflag = 0
                     result = self.swapAPI.get_order_list('XRP-USD-SWAP', state='0')
-                    for b in result['order_info']:
-                        if b['type'] == '3':
-                            closeprice = float(b['price'])
-                            if abs(a - closeprice) < a / self.step:
-                                openflag = -1
+                    if result:
+                        for b in result[0]['order_info']:
+                            if b['type'] == '3':
+                                closeprice = float(b['price'])
+                                if abs(a - closeprice) < a / self.step:
+                                    openflag = -1
 
                     if openflag == 0:
                         result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='1', price=str(a),
