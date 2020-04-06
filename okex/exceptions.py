@@ -4,7 +4,8 @@ import logging
 
 class OkexAPIException(Exception):
 
-    def __init__(self, response):
+    def \
+            __init__(self, response):
         # print(response.text + ', ' + str(response.status_code))
         logging.error("result:" + response.text + str(response.status_code))
         self.code = 0

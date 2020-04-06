@@ -8,11 +8,15 @@ import okex.index_api as index
 import okex.option_api as option
 import json
 import logging
+import threading
 import datetime
 import time
 global stopprogram
-class AutoTrade(object):
+
+
+class TradeThread(threading.Thread):
     def __init__(self, JY_dict, ZYZS_dict):
+        threading.Thread.__init__(self)
         log_format = '%(asctime)s - %(levelname)s - %(message)s'
         # 初始化日志
         logging.basicConfig(filename='mylog-AutoTrade.json', filemode='a', format=log_format, level=logging.INFO)
@@ -33,7 +37,7 @@ class AutoTrade(object):
         # vefyDict['secret_key'].append('8EFC039D096B97619E9D4A558A5C5155')
         # vefyDict['passphrase'].append('12345678')
 
-
+        self.threadlife = True
 
         self.accountAPI = account.AccountAPI(JY_dict['api_key'].get(),
                                              JY_dict['secret_key'].get(),
@@ -45,7 +49,7 @@ class AutoTrade(object):
 
         self.ShortQuantity = JY_dict['ShortQuantity'].get()
         self.LongQuantity = JY_dict['LongQuantity'].get()
-     #  ShortPrice = float(JY_dict['ShortPrice'].get())
+      # ShortPrice = float(JY_dict['ShortPrice'].get())
       # LongPrice = float(JY_dict['LongPrice'].get())
         self.ShortPoint = int(JY_dict['ShortPoint'].get())
         self.LongPoint = int(JY_dict['LongPoint'].get())
@@ -54,8 +58,15 @@ class AutoTrade(object):
         self.CoinType = JY_dict['CoinType'].get()
 
         self.param_dict = JY_dict
-        result = self.swapAPI.get_specific_ticker(self.CoinType + '-USD-SWAP')
+        result = self.swapAPI.get_order_list('XRP-USD-SWAP', state='0')
+        if result:
+            for b in result[0]['order_info']:
+                if b['state'] == '0' or b['state'] == '1':
+                    if b['type'] == '1' or b['type'] == '2':
+                        self.swapAPI.revoke_order(self.CoinType + '-USD-SWAP', order_id=b['order_id'])
+                        time.sleep(0.1)
 
+        result = self.swapAPI.get_specific_ticker(self.CoinType + '-USD-SWAP')
         if result['instrument_id'] == self.CoinType + '-USD-SWAP':
             self.currentPrice = float(result['last'])
 
@@ -67,6 +78,13 @@ class AutoTrade(object):
         self.shortRevoke = 'noneed'
         self.ShortDict = dict()
         self.LongDict = dict()
+    def run(self):
+        try:
+            self.trade()
+        except:
+            print("线程结束，重启线程")
+
+
     def trade(self):
         while True:
             self.take_JY()
@@ -86,18 +104,6 @@ class AutoTrade(object):
 
     def long_take(self):
         if self.longTake == 'need':
-            # while True:
-            #     time.sleep(0.1)
-            #     try:
-            #         result = self.spotAPI.get_specific_ticker(self.CoinType + '-USDT')
-            #         if result['instrument_id'] == self.CoinType + '-USDT':
-            #             LongPrice = float(result['last'])
-            #             break
-            #         else:
-            #             time.sleep(2)
-            #             print("获取当前价格失败，再次获取")
-            #     except BaseException as errmsg:
-            #         print("获取当前价格失败，再次获取。错误信息："+errmsg)
             LongPrice = self.currentPrice
             for i in range(0, self.LongPoint):
                 self.LongDict[LongPrice] = list()
@@ -332,8 +338,13 @@ class AutoTrade(object):
 #                 self.ZYZS_LongState = 0
 
 def start_trade(JY_dict, ZYZS_dict):
-    autotrade = AutoTrade(JY_dict,ZYZS_dict)
-    autotrade.trade()
+    autotrade = TradeThread(JY_dict, ZYZS_dict)
+    autotrade.start()
+    while True:
+        time.sleep(10)
+        if autotrade.isAlive()==False:
+            autotrade = TradeThread(JY_dict, ZYZS_dict)
+            autotrade.start()
 
 def stop_stop():
     global stopprogram
