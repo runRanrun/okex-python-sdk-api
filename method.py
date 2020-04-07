@@ -58,7 +58,7 @@ class TradeThread(threading.Thread):
         self.CoinType = JY_dict['CoinType'].get()
 
         self.param_dict = JY_dict
-        result = self.swapAPI.get_order_list('XRP-USD-SWAP', state='0')
+        result = self.swapAPI.get_order_list(self.CoinType+'-USD-SWAP', state='0')
         if result:
             for b in result[0]['order_info']:
                 if b['state'] == '0' or b['state'] == '1':
@@ -215,12 +215,12 @@ class TradeThread(threading.Thread):
                 time.sleep(0.1)
                 try:
                     openflag = 0
-                    result = self.swapAPI.get_order_list('XRP-USD-SWAP', state='0')
+                    result = self.swapAPI.get_order_list(self.CoinType + '-USD-SWAP', state='0')
                     if result:
                         for b in result[0]['order_info']:
                             if b['type'] == '4':
                                 closeprice = float(b['price'])
-                                if abs(a - closeprice) < a / self.step:
+                                if abs(a - closeprice) < a / self.Step:
                                     openflag = -1
                     if openflag == 0:
                         result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='2', price=str(a),
@@ -240,12 +240,12 @@ class TradeThread(threading.Thread):
                 time.sleep(0.1)
                 try:
                     openflag = 0
-                    result = self.swapAPI.get_order_list('XRP-USD-SWAP', state='0')
+                    result = self.swapAPI.get_order_list(self.CoinType + '-USD-SWAP', state='0')
                     if result:
                         for b in result[0]['order_info']:
                             if b['type'] == '3':
                                 closeprice = float(b['price'])
-                                if abs(a - closeprice) < a / self.step:
+                                if abs(a - closeprice) < a / self.Step:
                                     openflag = -1
 
                     if openflag == 0:

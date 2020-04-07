@@ -4686,3 +4686,7 @@
 2020-04-05 23:24:44,410 - INFO - body:
 2020-04-05 23:24:44,797 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP/470955971014764544"
 2020-04-05 23:24:44,797 - INFO - body:
+2020-04-07 23:16:08,616 - INFO - url:"https://www.okex.me/api/swap/v3/orders/LTC-USD-SWAP?state=0"
+2020-04-07 23:16:08,617 - INFO - body:
+2020-04-07 23:16:20,537 - INFO - url:"https://www.okex.me/api/swap/v3/cancel_order/LTC-USD-SWAP/472401124169558016"
+2020-04-07 23:16:20,538 - INFO - body:{}
