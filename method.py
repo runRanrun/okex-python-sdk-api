@@ -38,7 +38,9 @@ class TradeThread(threading.Thread):
             # vefyDict['secret_key'].append('8EFC039D096B97619E9D4A558A5C5155')
             # vefyDict['passphrase'].append('12345678')
 
-            self.threadlife = True
+            self.lag = 0.5  #操作等待时延
+
+            self._running = True
 
             self.accountAPI = account.AccountAPI(JY_dict['api_key'].get(),
                                                  JY_dict['secret_key'].get(),
@@ -54,8 +56,12 @@ class TradeThread(threading.Thread):
           # LongPrice = float(JY_dict['LongPrice'].get())
             self.ShortPoint = int(JY_dict['ShortPoint'].get())
             self.LongPoint = int(JY_dict['LongPoint'].get())
-            self.Step = float(JY_dict['Step'].get())
-            self.Step2 = float(JY_dict['Step2'].get())
+
+            self.shortStep = float(JY_dict['shortStep'].get())
+            self.shortStep2 = float(JY_dict['shortStep2'].get())
+            self.longStep = float(JY_dict['longStep'].get())
+            self.longStep2 = float(JY_dict['longStep2'].get())
+
             self.CoinType = JY_dict['CoinType'].get()
 
             self.param_dict = JY_dict
@@ -65,7 +71,7 @@ class TradeThread(threading.Thread):
                     if b['state'] == '0' or b['state'] == '1':
                         if b['type'] == '1' or b['type'] == '2':
                             self.swapAPI.revoke_order(self.CoinType + '-USD-SWAP', order_id=b['order_id'])
-                            time.sleep(0.1)
+                            time.sleep(self.lag)
 
             result = self.swapAPI.get_specific_ticker(self.CoinType + '-USD-SWAP')
             if result['instrument_id'] == self.CoinType + '-USD-SWAP':
@@ -81,15 +87,18 @@ class TradeThread(threading.Thread):
             self.LongDict = dict()
             self.shortClose = False
             self.longClose = False
-        except:
+        except BaseException as errorMsg:
+            print(errorMsg)
             self._running = False
 
     def run(self):
         try:
             self.trade()
-        except:
+        except BaseException as errorMsg:
             self._running = False
+            print(errorMsg)
             print("线程结束，重启线程")
+
 
     def trade(self):
         while True:
@@ -108,25 +117,25 @@ class TradeThread(threading.Thread):
             ShortPrice = currentPrice
             LongPrice = currentPrice
             for i in range(0, self.ShortPoint):
-                if self.shortClose == False:
-                    ShortPrice = round(ShortPrice + ShortPrice / self.Step, 2)
+                if self.longClose == False:
+                    ShortPrice = round(ShortPrice + ShortPrice / self.shortStep, 2)
                 else:
-                    ShortPrice = round(ShortPrice + ShortPrice / self.Step2, 2)
-                    self.shortClose = False
+                    ShortPrice = round(ShortPrice + ShortPrice / self.shortStep2, 2)
+                    self.longClose = False
                 self.ShortDict[ShortPrice] = list()
                 self.ShortDict[ShortPrice].append(-1)
                 self.ShortDict[ShortPrice].append('NULL')
             for i in range(0, self.LongPoint):
-                if self.longClose == False:
-                    LongPrice = round(LongPrice - LongPrice / self.Step, 2)
+                if self.shortClose == False:
+                    LongPrice = round(LongPrice - LongPrice / self.longStep, 2)
                 else:
-                    LongPrice = round(LongPrice - LongPrice / self.Step2, 2)
-                    self.longClose = False
+                    LongPrice = round(LongPrice - LongPrice / self.longStep2, 2)
+                    self.shortClose = False
                 self.LongDict[LongPrice] = list()
                 self.LongDict[LongPrice].append(-1)
                 self.LongDict[LongPrice].append('NULL')
             for a in self.ShortDict.keys():
-                time.sleep(0.1)
+                time.sleep(self.lag)
                 try:
                     openflag = 0
                     result = self.swapAPI.get_order_list(self.CoinType + '-USD-SWAP', state='0')
@@ -134,12 +143,12 @@ class TradeThread(threading.Thread):
                         for b in result[0]['order_info']:
                             if b['type'] == '4':
                                 closeprice = float(b['price'])
-                                if abs(a - closeprice) < a / self.Step:
+                                if abs(a - closeprice) < a / self.shortStep:
                                     openflag = -1
                     if openflag == 0:
                         result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='2', price=str(a),
                                                          size=self.ShortQuantity)
-                        time.sleep(0.1)
+                        time.sleep(self.lag)
                         if result['result'] == 'true' and result['error_code'] == '0' and result['order_id'] != '-1':
                             self.ShortDict[a][0] = 0
                             self.ShortDict[a][1] = result['order_id']
@@ -151,7 +160,7 @@ class TradeThread(threading.Thread):
                     logging.info("开空单异常:")
                     print(errmsg)
             for a in self.LongDict.keys():
-                time.sleep(0.1)
+                time.sleep(self.lag)
                 try:
                     openflag = 0
                     result = self.swapAPI.get_order_list(self.CoinType + '-USD-SWAP', state='0')
@@ -159,7 +168,7 @@ class TradeThread(threading.Thread):
                         for b in result[0]['order_info']:
                             if b['type'] == '3':
                                 closeprice = float(b['price'])
-                                if abs(a - closeprice) < a / self.Step:
+                                if abs(a - closeprice) < a / self.longStep:
                                     openflag = -1
 
                     if openflag == 0:
@@ -181,45 +190,45 @@ class TradeThread(threading.Thread):
         for a in self.ShortDict.keys():
             if self.ShortDict[a][0] == 0:
                 result = self.swapAPI.get_order_info(self.CoinType+'-USD-SWAP', self.ShortDict[a][1])
-                time.sleep(0.1)
+                time.sleep(self.lag)
                 if result['state'] == '2':
                     self.revokeFlag = True
                     self.shortClose = True
                     self.ShortDict[a][0] = 1
-                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='4', price=str(a-a/self.Step2),
+                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='4', price=str(a-a/self.shortStep2),
                                                  size=self.ShortQuantity)
-                    time.sleep(0.1)
+                    time.sleep(self.lag)
 
         for a in self.LongDict.keys():
             if self.LongDict[a][0] == 0:
                 result = self.swapAPI.get_order_info(self.CoinType + '-USD-SWAP', self.LongDict[a][1])
-                time.sleep(0.1)
+                time.sleep(self.lag)
                 if result['state'] == '2':
                     self.revokeFlag = True
                     self.longClose = True
                     self.LongDict[a][0] = 1
-                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step2),
+                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.longStep2),
                                             size=self.LongQuantity)
-                    time.sleep(0.1)
+                    time.sleep(self.lag)
 
 
     def revoke_JY(self):
         for a in self.ShortDict.keys():
             if self.ShortDict[a][0] == 0:
                 result = self.swapAPI.revoke_order(self.CoinType+'-USD-SWAP', order_id=self.ShortDict[a][1])
-                time.sleep(0.1)
+                time.sleep(self.lag)
                 if result['result'] != 'true':
-                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='4', price=str(a - a / self.Step2),
+                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='4', price=str(a - a / self.shortStep2),
                                             size=self.ShortQuantity)
-                    time.sleep(0.1)
+                    time.sleep(self.lag)
         for a in self.LongDict.keys():
             if self.LongDict[a][0] == 0:
                 result = self.swapAPI.revoke_order(self.CoinType+'-USD-SWAP', order_id=self.LongDict[a][1])
-                time.sleep(0.1)
+                time.sleep(self.lag)
                 if result['result'] != 'true':
-                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step2),
+                    self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.longStep2),
                                             size=self.LongQuantity)
-                    time.sleep(0.1)
+                    time.sleep(self.lag)
         self.JYflag = False
         self.revokeFlag = False
 
@@ -228,143 +237,22 @@ class TradeThread(threading.Thread):
         t = now.isoformat("T", "milliseconds")
         return t + "Z"
 
-
-    def long_trade(self):
-        while True:
-            self.long_take()
-            self.long_check()
-            if self.longRevoke == 'need':
-                self.long_revoke()
-
-    def long_take(self):
-        if self.longTake == 'need':
-            LongPrice = self.currentPrice
-            for i in range(0, self.LongPoint):
-                self.LongDict[LongPrice] = list()
-                self.LongDict[LongPrice].append(-1)
-                self.LongDict[LongPrice].append('NULL')
-                LongPrice = round(LongPrice - LongPrice / self.Step, 2)
-            self.longTake = 'noneed'
-        for a in self.LongDict.keys():
-            if self.LongDict[a][0] == -1:
-                for i in range(3):
-                    time.sleep(0.1)
-                    try:
-                        result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='1', price=str(a),
-                                                         size=self.LongQuantity)
-                        if result['result'] == 'true' and result['error_code'] == '0' and result['order_id'] != '-1':
-                            self.LongDict[a][0] = 0
-                            self.LongDict[a][1] = result['order_id']
-                            logging.info("开多单成功,开单价格：" + str(a)+"开单数量：" +
-                                         self.LongQuantity + " 订单id:"+result['order_id'])
-                            break
-                        else:
-                            logging.info('开多单失败，重新开单。开单价格：'+str(a))
-                            time.sleep(10)
-                            continue
-                    except BaseException as errmsg:
-                        logging.info("开多单异常")
-                        print(errmsg)
-                        time.sleep(10)
-        return
-
-    def long_check(self):
-        while True:
-            time.sleep(0.1)
-            try:
-                result = self.swapAPI.get_specific_ticker(self.CoinType + '-USD-SWAP')
-                if result['instrument_id'] == self.CoinType + '-USD-SWAP':
-                    self.currentPrice = float(result['last'])
-                    break
-                else:
-                    print("获取当前价格失败，再次获取")
-            except BaseException as errmsg:
-                print("获取当前价格失败，再次获取。错误信息："+errmsg)
-        if self.currentPrice > max(self.LongDict.keys())+max(self.LongDict.keys())/self.Step:
-            self.longRevoke = 'need'
-
-        else:
-            for a in self.LongDict.keys():
-                if self.LongDict[a][0] == 0:
-                    try:
-                        result = self.swapAPI.get_order_info(self.CoinType + '-USD-SWAP', self.LongDict[a][1])
-                        time.sleep(0.1)
-                        if result['state'] == '2' and result['type'] == '1':
-                            result = self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3'
-                                                    , price=str(a + a / self.Step2), size=self.LongQuantity)
-                            if result['result'] == 'true':
-                                self.LongDict[a][0] = 1
-                                self.LongDict[a][1] = result['order_id']
-                            time.sleep(0.1)
-                    except BaseException as errmsg:
-                        print('查询开多单失败:'+errmsg)
-                if self.LongDict[a][0] == 1:
-                    try:
-                        result = self.swapAPI.get_order_info(self.CoinType + '-USD-SWAP', self.LongDict[a][1])
-                        time.sleep(0.1)
-                        if result['state'] == '2':
-                            self.LongDict[a][0] = -1
-                            self.LongDict[a][1] = 'NULL'
-                    except BaseException as errmsg:
-                        print('查询平多单失败：')
-                        print(errmsg)
-
-    def long_revoke(self):
-        for a in self.LongDict.keys():
-            if self.LongDict[a][0] == 0:
-                try:
-                    time.sleep(0.1)
-                    result = self.swapAPI.get_order_info(self.CoinType + '-USD-SWAP', self.LongDict[a][1])
-                    if result['result'] == 'true'and (result['state'] == '0' or result['state'] == '1'):
-                        self.swapAPI.revoke_order(self.CoinType+'-USD-SWAP', order_id=self.LongDict[a][1])
-                    elif result['result'] == 'true' and result['state'] == '2':
-                        self.swapAPI.take_order(self.CoinType + '-USD-SWAP', type='3', price=str(a + a / self.Step2),
-                                            size=self.LongQuantity)
-                        time.sleep(0.1)
-                except BaseException as errmsg:
-                    print('撤单失败')
-                    print(errmsg)
-                    continue
-        self.LongDict.clear()
-        self.longTake = 'need'
-        self.revokeFlag = 'noneed'
-
-
-
-
-#
-# class ZYZS(object):
-#     def __init__(self):
-#         api_key = "e475a6ff-3a83-4bce-8cc8-51b1108b5d23"
-#         secret_key = "57944536044AD9587DC263C734A2B3A7"
-#         passphrase = "rander360104456"
-#         self.ZYZS_ShortPrice  = 20
-#         self.ZYZS_LongPrice = 40
-#         self.swapAPI = swap.SwapAPI(api_key, secret_key, passphrase, False)
-#     def take_ZYZS(self):
-#         if self.ZYZS_ShortState == -1:
-#             short_algo_price = self.ZYZS_ShortPrice - self.ZYZS_ShortPrice / float(self.ZYZS_OpenShortProp)
-#             result = self.swapAPI.take_order_algo(self.CoinType+'USD-SWAP', type=2, order_type=1,
-#                                      size=self.ZYZS_ShortQuantity, trigger_price=str(self.ZYZS_ShortPrice),
-#                                      algo_price=str(short_algo_price))
-#             if result['data']['result'] == 'success':
-#                 self.ZYZS_ShortState = 0
-#         if self.ZYZS_LongState == -1:
-#             long_algo_price = self.ZYZS_LongPrice + self.ZYZS_LongPrice / float(self.ZYZS_OpenLongProp)
-#             result = self.swapAPI.take_order_algo(self.CoinType + 'USD-SWAP', type=1, order_type=1,
-#                                      size=self.ZYZS_LongQuantity, trigger_price=str(self.ZYZS_LongPrice),
-#                                      algo_price=str(long_algo_price))
-#             if result['data']['result'] == 'success':
-#                 self.ZYZS_LongState = 0
-
 def start_trade(JY_dict, ZYZS_dict):
     autotrade = TradeThread(JY_dict, ZYZS_dict)
     autotrade.start()
-    while True:
-        time.sleep(10)
-        if autotrade._running == False:
-            autotrade = TradeThread(JY_dict, ZYZS_dict)
-            autotrade.start()
+    # while True:
+    #     time.sleep(100)
+    #     try:
+    #         if autotrade._running == False or autotrade.is_alive() == True:
+    #             autotrade = TradeThread(JY_dict, ZYZS_dict)
+    #             autotrade.start()
+    #         else:
+    #             print("线程运行正常")
+    #     except BaseException as errorMsg:
+    #         print("线程运行异常：")
+    #         print(errorMsg)
+    #         autotrade = TradeThread(JY_dict, ZYZS_dict)
+    #         autotrade.start()
 
 def stop_stop():
     global stopprogram
